@@ -9,6 +9,15 @@ export default function Hero() {
     setIsVisible(true)
   }, [])
 
+  const handleDownloadResume = () => {
+    const link = document.createElement("a")
+    link.href = "/resume/R-Rishika-Resume.pdf"
+    link.download = "R-Rishika-Resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-6xl mx-auto">
@@ -31,12 +40,12 @@ export default function Hero() {
               >
                 Contact Me
               </a>
-              <a
-                href="#"
-                className="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300"
+              <button
+                onClick={handleDownloadResume}
+                className="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
               >
                 Download Resume
-              </a>
+              </button>
             </div>
           </div>
 
