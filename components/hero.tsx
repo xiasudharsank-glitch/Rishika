@@ -11,7 +11,7 @@ export default function Hero() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a")
-    link.href = "/resume/R-Rishika-Resume.pdf"
+    link.href = "/Rishika__R.pdf"
     link.download = "R-Rishika-Resume.pdf"
     document.body.appendChild(link)
     link.click()
